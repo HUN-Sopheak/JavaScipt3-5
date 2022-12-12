@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #demo{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        margin-left: 10px;
+    }
+    #demo1{
+        width: 100px;
+        height: 100px;
+        
+    }
+</style>
+<body>
+    <center>
+       <div id="demo"></div>
+       <button>Show Array</button>
+    </center>
+</body>
+<script>
+    var color=new Array("Black", "White", "red", "green", "yellow");
+    var text=" ";
+    document.querySelector("button").addEventListener('click',()=>{
+        for(var i=0;i<color.length;i++){
+            text+="<div id='demo1' style='background-color:"+color[i]+"'></div>"
+        }
+        document.getElementById("demo").innerHTML=text;
+    })
+</script>
+</html>

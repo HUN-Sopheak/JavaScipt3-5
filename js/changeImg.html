@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/Image/1.jpg" alt="" id="IMG">
+    <font id="demo" color="red">
+        <h1>Hello JavaScript</h1>
+    </font>
+    <button onclick="btn_change()">Change IMG</button>
+</body>
+<script>
+    function btn_change(){
+        var item1=document.getElementById("IMG");
+        var item2=document.getElementById("demo");
+        item1.setAttribute("src","/Image/2.gif");
+        item2.setAttribute("color","blue");
+    }
+</script>
+</html>

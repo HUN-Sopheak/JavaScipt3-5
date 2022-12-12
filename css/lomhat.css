@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 750px;
+    height: auto;
+    margin: auto;
+}
+nav{
+    width: 100%;
+    background: linear-gradient(60deg,lightskyblue,lightgreen);
+}
+ul{
+    list-style: none;
+    text-align: center;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+}
