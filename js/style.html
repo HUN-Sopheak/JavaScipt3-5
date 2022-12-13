@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>Document</title>
 </head>
 <style>
-    .box{
+    .box {
         width: 50%;
         height: 50vh;
         background-color: #222;
@@ -16,21 +17,44 @@
         align-items: center;
         color: #fff;
         text-transform: capitalize;
+        cursor: pointer;
     }
 </style>
+
 <body>
     <center>
         <div class="box">
             <h1>this is a black</h1>
+           
         </div>
+        <img src="/Image/1.jpg" alt="">
     </center>
 </body>
 <script>
-    var box =document.querySelector(".box");
-    box.addEventListener("click",()=>{
-        box.style.backgroundColor="red";
-        box.innerHTML="<h1>this is a red</h1>";
+    var box = document.querySelector(".box");
+    var i = true;
+    box.addEventListener("click", () => {
+        if (i) {
+            box.style.backgroundColor = "red";
+            box.innerHTML = "<h1>this is a red</h1>";
+        } else {
+            box.style.backgroundColor = "#222";
+            box.innerHTML = "<h1>this is a black</h1>";
+        }
+        i = !i;
+    });
+
+    img=document.querySelector("img");
+    img.addEventListener('mouseout',()=>{
+        if (i) {
+            img.setAttribute("src","https://cdn.shopify.com/s/files/1/0077/6136/2999/files/Denki_Kaminari_headshot_grande.png?v=1598011553");
+        } else {
+            img.setAttribute("src","/Image/1.jpg");
+        }
+        i = !i;
+       
     })
-    //()=> = arrow function
+
 </script>
+
 </html>
