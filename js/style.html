@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 50%;
+        height: 50vh;
+        background-color: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-transform: capitalize;
+    }
+</style>
+<body>
+    <center>
+        <div class="box">
+            <h1>this is a black</h1>
+        </div>
+    </center>
+</body>
+<script>
+    var box =document.querySelector(".box");
+    box.addEventListener("click",()=>{
+        box.style.backgroundColor="red";
+        box.innerHTML="<h1>this is a red</h1>";
+    })
+    //()=> = arrow function
+</script>
+</html>
