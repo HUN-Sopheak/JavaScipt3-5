@@ -18,13 +18,28 @@
     <div class="container">
         <div class="box bg-success mt-2 m-auto" ></div>
         <div class="btn-group">
-            <button class="btn btn-outline-primary">Hide</button>
-            <button class="btn btn-outline-primary">Show</button>
-            <button class="btn btn-outline-primary">Toggle</button>
+            <button class="btn btn-outline-primary" onclick="hide()">Hide</button>
+            <button class="btn btn-outline-primary" onclick="show()">Show</button>
+            <button class="btn btn-outline-primary" onclick="toggle()">Toggle</button>
         </div>
     </div>
 </body>
 <script>
-    
+    var box = document.querySelector(".box");
+    const hide=()=>{
+        box.style.visibility="hidden";
+    }
+    const show=()=>{
+        box.style.visibility="visible";
+    }
+    var n = true;
+    const toggle=()=>{
+        if(n){
+            box.style.visibility="hidden";
+        }else{
+            box.style.visibility="visible";
+        }
+        n=!n;
+    }
 </script>
 </html>
