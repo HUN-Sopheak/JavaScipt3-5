@@ -30,11 +30,11 @@
             <button class="btn btn-outline-primary" onclick="show()">Show</button>
             <button class="btn btn-outline-primary" onclick="toggle()">Toggle</button>
             <button class="btn btn-outline-primary" onclick="red()">Red</button>
-            <button class="btn btn-outline-primary" onclick="">Blue</button>
-            <button class="btn btn-outline-primary" onclick="">Black</button>
-            <button class="btn btn-outline-primary" onclick="">Yellow</button>
-            <button class="btn btn-outline-primary" onclick="">Pink</button>
-            <button class="btn btn-outline-primary" onclick="">Purple</button>
+            <button class="btn btn-outline-primary" onclick="blue()">Blue</button>
+            <button class="btn btn-outline-primary" onclick="black()">Black</button>
+            <button class="btn btn-outline-primary" onclick="yellow()">Yellow</button>
+            <button class="btn btn-outline-primary btn1" onclick="pink()" value="pink">Pink</button>
+            <button class="btn btn-outline-primary btn2" onclick="Purple()" value="purple">Purple</button>
         </div>
     </div>
 </body>
@@ -58,6 +58,28 @@
     const red=()=>{
         box.style.backgroundColor="red";
         box.innerHTML="<h1>red</h1>"
+    }
+    const blue=()=>{
+        box.style.backgroundColor="blue";
+        box.innerHTML="<h1>blue</h1>"
+    }
+    const black=()=>{
+        box.style.backgroundColor="black";
+        box.innerHTML="<h1>black</h1>"
+    }
+    const yellow=()=>{
+        box.style.backgroundColor="yellow";
+        box.innerHTML="<h1 style=color:black;>yellow</h1>"
+    }
+    const pink=()=>{
+        var val =document.querySelector(".btn1").value;
+        box.style.backgroundColor="pink";
+        box.innerHTML="<h1 style=color:black;>"+val+"</h1>"
+    }
+    const Purple=()=>{
+        var val =document.querySelector(".btn2").value;
+        box.style.backgroundColor="purple";
+        box.innerHTML="<h1 style=color:white;>"+val+"</h1>"
     }
 </script>
 </html>
