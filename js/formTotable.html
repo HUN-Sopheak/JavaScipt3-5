@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    img{
+        width: 82px;
+        height: 82px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1 class="display-1 text-center text-capitalize">Crud by javaScript</h1>
+        <label for="" class="form-label">អត្តលេខ</label>
+        <input type="text" class="form-control w-50" id="ID">
+        <label for="" class="form-label">ឈ្មោះ</label>
+        <input type="text" class="form-control w-50" id="stu_name">
+        <label for="" class="form-label">ភេទ</label>
+        <input type="text" class="form-control w-50" id="gender">
+        <label for="" class="form-label">លេខទូរស័ព្ទ</label>
+        <input type="tel" class="form-control w-50" id="phone">
+        <label for="" class="form-label">អាសយដ្ឋាន</label>
+        <input type="text" class="form-control w-50" id="address">
+        <label for="" class="form-label">អ៊ីម៉ែល</label>
+        <input type="email" class="form-control w-50 mb-2" id="email">
+        <label for="" class="form-label">រូបថត</label>
+        <input type="file" class="form-control w-50 mb-2" id="photo">
+        <Button class="btn btn-primary" onclick="add()">Add</Button>
+        <div class="border-top mt-2  border-3 border-danger">
+            <div class="h1 pt-2">ប្រវត្តិសង្ខេបសិស្ស</div>
+        </div>
+        <table class="table table-bordered text-center table-striped table-hover">
+            <thead class="bg-danger text-white">
+                <th>អត្តលេខ</th>
+                <th>ឈ្មោះ</th>
+                <th>ភេទ</th>
+                <th>លេខទូរស័ព្ទ</th>
+                <th>អាសយដ្ឋាន</th>
+                <th>អ៊ីម៉ែល</th>
+                <th>រូបថត</th>
+            </thead>
+            <tbody id="getData">
+                
+            </tbody>
+        </table>
+        <!-- <img src="/Image/1.jpg" alt=""> -->
+    </div>
+</body>
+<script>
+    let id = document.getElementById("ID");
+    let stu_name = document.getElementById("stu_name");
+    let gender = document.getElementById("gender");
+    let phone = document.getElementById("phone");
+    let address = document.getElementById("address");
+    let email = document.getElementById("email");
+    let getData = document.getElementById("getData");
+    let photo = document.getElementById("photo");
+    let text = " "; 
+    const add=()=>{
+        let get ="<tr><td>"+id.value+"</td><td>"+stu_name.value+"</td><td>"+gender.value+
+            "</td><td>"+phone.value+"</td><td>"+address.value+"</td><td>"+email.value+"</td><td> <img src='/Image/"+photo.files[0].name+"' class='img-fluid'></td></tr>";
+        getData.innerHTML=text+=get;
+        id.value=" ";
+        stu_name.value=" ";
+        gender.value=" ";
+        phone.value=" ";
+        address.value=" ";
+        email.value=" ";
+        photo.value=" "
+    }
+</script>
+</html>
