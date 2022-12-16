@@ -29,7 +29,8 @@
         <label for="" class="form-label">អ៊ីម៉ែល</label>
         <input type="email" class="form-control w-50 mb-2" id="email">
         <label for="" class="form-label">រូបថត</label>
-        <input type="file" class="form-control w-50 mb-2" id="photo">
+        <input type="file" class="form-control w-50 mb-2" id="photo" 
+        onchange="encodeImageFileAsURL(this)"  >
         <Button class="btn btn-primary" onclick="add()">Add</Button>
         <div class="border-top mt-2  border-3 border-danger">
             <div class="h1 pt-2">ប្រវត្តិសង្ខេបសិស្ស</div>
@@ -52,6 +53,7 @@
     </div>
 </body>
 <script>
+    var image = ''
     let id = document.getElementById("ID");
     let stu_name = document.getElementById("stu_name");
     let gender = document.getElementById("gender");
@@ -63,7 +65,8 @@
     let text = " "; 
     const add=()=>{
         let get ="<tr><td>"+id.value+"</td><td>"+stu_name.value+"</td><td>"+gender.value+
-            "</td><td>"+phone.value+"</td><td>"+address.value+"</td><td>"+email.value+"</td><td> <img src='/Image/"+photo.files[0].name+"' class='img-fluid'></td></tr>";
+            "</td><td>"+phone.value+"</td><td>"+address.value+"</td><td>"+email.value+
+            "</td><td> <img src='"+image+"' class='img-fluid'></td></tr>";
         getData.innerHTML=text+=get;
         id.value=" ";
         stu_name.value=" ";
@@ -72,6 +75,16 @@
         address.value=" ";
         email.value=" ";
         photo.value=" "
+        image = ""
     }
+
+    function encodeImageFileAsURL(element) {
+        let file = element.files[0];
+        let reader = new FileReader();
+        reader.onloadend = function() {
+            image = reader.result
+        }
+        reader.readAsDataURL(file);
+      }
 </script>
 </html>
