@@ -12,6 +12,10 @@
         width: 82px;
         height: 82px;
     }
+    .photo img{
+        width: 100px;
+        height: 100px;
+    }
 </style>
 <body>
     <div class="container">
@@ -32,6 +36,7 @@
         <input type="file" class="form-control w-50 mb-2" id="photo" 
         onchange="encodeImageFileAsURL(this)"  >
         <Button class="btn btn-primary" onclick="add()">Add</Button>
+        <div id="Showimg" class="Photo img-fluid"></div>
         <div class="border-top mt-2  border-3 border-danger">
             <div class="h1 pt-2">ប្រវត្តិសង្ខេបសិស្ស</div>
         </div>
@@ -49,7 +54,7 @@
                 
             </tbody>
         </table>
-        <!-- <img src="/Image/1.jpg" alt=""> -->
+        
     </div>
 </body>
 <script>
@@ -74,8 +79,6 @@
         phone.value=" ";
         address.value=" ";
         email.value=" ";
-        photo.value=" "
-        image = ""
     }
 
     function encodeImageFileAsURL(element) {
@@ -83,6 +86,7 @@
         let reader = new FileReader();
         reader.onloadend = function() {
             image = reader.result
+            document.getElementById("Showimg").innerHTML="<img src='"+image+"' class='img-fluid' >";
         }
         reader.readAsDataURL(file);
       }
