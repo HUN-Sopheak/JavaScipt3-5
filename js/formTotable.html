@@ -1,75 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<style>
-    img{
-        width: 100%;
-        height: 100%;
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    img {
+      width: 100%;
+      height: 100%;
     }
-    tbody img{
-        width: 82px;
-        height: 82px;
+    tbody img {
+      width: 82px;
+      height: 82px;
     }
-    .col-6 .photo{
-        width: 100%;
-        height: 100%;
+    .col-6 .photo {
+      width: 100%;
+      height: 100%;
     }
-</style>
-<body>
+  </style>
+  <body>
     <div class="container">
-        <h1 class="display-1 text-center text-capitalize">Crud by javaScript</h1>
-        <div class="row">
-            <div class="col-6">
-                <label for="" class="form-label">អត្តលេខ</label>
-                <input type="text" class="form-control w-50" id="ID">
-                <label for="" class="form-label">ឈ្មោះ</label>
-                <input type="text" class="form-control w-50" id="stu_name">
-                <label for="" class="form-label">ភេទ</label>
-                <input type="text" class="form-control w-50" id="gender">
-                <label for="" class="form-label">លេខទូរស័ព្ទ</label>
-                <input type="tel" class="form-control w-50" id="phone">
-                <label for="" class="form-label">អាសយដ្ឋាន</label>
-                <input type="text" class="form-control w-50" id="address">
-                <label for="" class="form-label">អ៊ីម៉ែល</label>
-                <input type="email" class="form-control w-50 mb-2" id="email">
-                <label for="" class="form-label">រូបថត</label>
-                <input type="file" class="form-control w-50 mb-2" id="photo" 
-                onchange="encodeImageFileAsURL(this)"  >
-                <Button class="btn btn-primary" onclick="add()">Add</Button>
-            </div>
-            <div class="col-6">
-                <div class="display-1">Display</div>
-                <div id="Showimg" class="Photo img-fluid"></div>
-            </div>
-        </div> 
-        <div class="border-top mt-2  border-3 border-danger">
-            <div class="h1 pt-2">ប្រវត្តិសង្ខេបសិស្ស</div>
+      <h1 class="display-1 text-center text-capitalize">Crud by javaScript</h1>
+      <div class="row">
+        <div class="col-6">
+          <label for="" class="form-label">អត្តលេខ</label>
+          <input type="text" class="form-control w-50" id="ID" />
+          <label for="" class="form-label">ឈ្មោះ</label>
+          <input type="text" class="form-control w-50" id="stu_name" />
+          <label for="" class="form-label">ភេទ</label>
+          <input type="text" class="form-control w-50" id="gender" />
+          <label for="" class="form-label">លេខទូរស័ព្ទ</label>
+          <input type="tel" class="form-control w-50" id="phone" />
+          <label for="" class="form-label">អាសយដ្ឋាន</label>
+          <input type="text" class="form-control w-50" id="address" />
+          <label for="" class="form-label">អ៊ីម៉ែល</label>
+          <input type="email" class="form-control w-50 mb-2" id="email" />
+          <label for="" class="form-label">រូបថត</label>
+          <input
+            type="file"
+            class="form-control w-50 mb-2"
+            id="photo"
+            onchange="encodeImageFileAsURL(this)"
+          />
+          <button class="btn btn-primary" onclick="add()">Add</button>
         </div>
-        <table class="table table-bordered text-center table-striped table-hover">
-            <thead class="bg-danger text-white">
-                <th>អត្តលេខ</th>
-                <th>ឈ្មោះ</th>
-                <th>ភេទ</th>
-                <th>លេខទូរស័ព្ទ</th>
-                <th>អាសយដ្ឋាន</th>
-                <th>អ៊ីម៉ែល</th>
-                <th>រូបថត</th>
-            </thead>
-            <tbody id="getData">
-                
-            </tbody>
-        </table>
-        
+        <div class="col-6">
+          <div class="display-1">Display</div>
+          <div id="Showimg" class="Photo img-fluid"></div>
+        </div>
+      </div>
+      <div class="border-top mt-2 border-3 border-danger">
+        <div class="h1 pt-2">ប្រវត្តិសង្ខេបសិស្ស</div>
+      </div>
+      <table class="table table-bordered text-center table-striped table-hover">
+        <thead class="bg-danger text-white">
+          <th>អត្តលេខ</th>
+          <th>ឈ្មោះ</th>
+          <th>ភេទ</th>
+          <th>លេខទូរស័ព្ទ</th>
+          <th>អាសយដ្ឋាន</th>
+          <th>អ៊ីម៉ែល</th>
+          <th>រូបថត</th>
+        </thead>
+        <tbody id="getData"></tbody>
+      </table>
     </div>
-</body>
-<script>
-    var image = ''
+  </body>
+  <script>
+    var image = "";
     let id = document.getElementById("ID");
     let stu_name = document.getElementById("stu_name");
     let gender = document.getElementById("gender");
@@ -78,29 +84,47 @@
     let email = document.getElementById("email");
     let getData = document.getElementById("getData");
     let photo = document.getElementById("photo");
-    let text = " "; 
-    const add=()=>{
-        let get ="<tr><td>"+id.value+"</td><td>"+stu_name.value+"</td><td>"+gender.value+
-            "</td><td>"+phone.value+"</td><td>"+address.value+"</td><td>"+email.value+
-            "</td><td> <img src='"+image+"' class='img-fluid'></td></tr>";
-        getData.innerHTML=text+=get;
-        id.value=" ";
-        stu_name.value=" ";
-        gender.value=" ";
-        phone.value=" ";
-        address.value=" ";
-        email.value=" ";
-    }
+    let text = " ";
+    let i = true;
+    const add = () => {
+      let get =
+        "<tr><td>" +
+        id.value +
+        "</td><td>" +
+        stu_name.value +
+        "</td><td>" +
+        gender.value +
+        "</td><td>" +
+        phone.value +
+        "</td><td>" +
+        address.value +
+        "</td><td>" +
+        email.value +
+        "</td><td> <img src='" +
+        image +
+        "' class='img-fluid'></td></tr>";
+      getData.innerHTML = text += get;
+      id.value = " ";
+      stu_name.value = " ";
+      gender.value = " ";
+      phone.value = " ";
+      address.value = " ";
+      email.value = " ";
+      photo.value = null;
+    document.getElementById("Showimg").style.display = "none";
+    };
 
     function encodeImageFileAsURL(element) {
-        let file = element.files[0];
-        let reader = new FileReader();
-        reader.onloadend = function() {
-            image = reader.result
-            document.getElementById("Showimg").innerHTML="<img src='"+image+"' class='img-fluid' >";
-            // alert(image);
-        }
-        reader.readAsDataURL(file);
-      }
-</script>
+      let file = element.files[0];
+      let reader = new FileReader();
+      reader.onloadend = function () {
+        image = reader.result;
+        document.getElementById("Showimg").style.display = "block";
+        document.getElementById("Showimg").innerHTML =
+          "<img src='" + image + "' class='img-fluid' >";
+        // alert(image);
+      };
+      reader.readAsDataURL(file);
+    }
+  </script>
 </html>
