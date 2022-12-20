@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .menu{
+        width: 100%;
+        background-color: blue;
+    }
+    .menu ul{
+        list-style: none;
+        text-align: center;
+    }
+    .menu ul li{
+        display: inline-block;
+    }
+    .menu ul li a{
+        color: white;
+        padding: 10px;
+        display: block;
+        font-size: 25px;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+    .menu ul li:hover a{
+        background-color: rgba(255, 255, 255, 0.348);
+    }
+</style>
+<body>
+    
+    <div class="menu">
+        <ul id="list"></ul>
+    </div>
+
+</body>
+<script>
+
+    const menuItem = new Array('Home','sport','news','log in','log out','register');
+    // const menuItem = ['Home','sport','news','log in','log out','register']
+    var text = " ";
+    menuItem.map(function(value,index){
+        text+="<li key='"+index+"'> <a href=''>"+value+"</a> </li>";
+    })
+    document.getElementById("list").innerHTML=text;
+</script>
+</html>

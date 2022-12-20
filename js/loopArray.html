@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in</title>
+</head>
+<body>
+    <center>
+        <div id="box">
+
+        </div>
+    </center>
+</body>
+<script>
+
+    var car= ["volvo","BMW","Toyota","Tesla","Fothing",""];
+    var txt = " ";
+    
+    for(i=0;i<car.length;i++){
+        txt+=car[i]+"&nbsp;";
+    }
+
+    for (n in car){
+        txt+=n;
+    }
+
+    for(n of car){
+        txt+=n;
+    }
+
+    car.forEach((value,index)=>{
+        txt+=index+":"+value+"<br>";
+    })
+
+    car.map(function(value,index){
+        txt+=index+": "+value+"<br>"
+    })
+    document.getElementById("box").innerHTML="<h1>"+txt+"</h1>"
+</script>
+</html>
