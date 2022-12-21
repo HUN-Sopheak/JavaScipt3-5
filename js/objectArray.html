@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    h1{
+        font-style: italic;
+        font-size: 50px;
+        margin: 0;
+        padding: 0;
+        text-decoration: underline blue;
+        color: red;
+    }
+    h1::selection{
+        background-color: black;
+        color: white;
+        text-decoration: underline blue;
+    }
+</style>
+<body>
+    <center>
+        <h1>Object Array</h1>
+        <div class="container">
+            <table class="table text-capitalize table-bordered mt-2">
+                <thead class="text-center">
+                    <th>ID</th>
+                    <th>name</th>
+                    <th>sex</th>
+                    <th>Link</th>
+                </thead>
+                <tbody id="render">
+
+                </tbody>
+            </table>
+        </div>
+        
+    </center>
+</body>
+<script>
+    const objArr = [//object Array
+        {id:1001,name: "tith",sex:'male'},
+        {id:1002,name: "Nary",sex:'female'},
+        {id:1003,name: "sochea",sex:'female'},
+        {id:1004,name: "clara",sex:'female'},
+        {id:1005,name:"Home" ,sex: 'Unknow', link: "https://facebook.com"}
+    ];
+    var render1 = document.getElementById("render");
+    var text=" ";
+    for(item of objArr){
+        text+="<tr><td>"+item.id+"</td><td>"+item.name+"</td><td>"
+            +item.sex+"</td><td><a href="+item.link+">"+item.name+"</a></td></tr>"
+    }
+    render1.innerHTML=text;
+</script>
+</html>
