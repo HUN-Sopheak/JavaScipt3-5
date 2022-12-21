@@ -32,7 +32,7 @@
         text-transform: capitalize;
     }
     .menu ul li:hover a{
-        background-color: rgba(255, 255, 255, 0.348);
+        background-color: rgba(0,0,0,0.5);
     }
 </style>
 <body>
@@ -48,7 +48,7 @@
     // const menuItem = ['Home','sport','news','log in','log out','register']
     var text = " ";
     menuItem.map(function(value,index){
-        text+="<li key='"+index+"'> <a href=''>"+value+"</a> </li>";
+        text+="<li key='"+index+"'> <a href='#'>"+value+"</a> </li>";
     })
     document.getElementById("list").innerHTML=text;
 </script>
